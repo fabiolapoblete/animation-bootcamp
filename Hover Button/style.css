@@ -1,0 +1,16 @@
+.btn {
+    background-color: rgb(49, 48, 48);
+    color: whitesmoke;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.5s linear;
+}
+
+.btn:hover {
+    background-color: rgb(221, 17, 17);
+    padding: 2rem 4rem;
+    box-shadow: 2px 2px 8px rgb(172, 169, 169);
+} 
