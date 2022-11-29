@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #e2e2e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.watch {
+    width: 500px;
+    height: 500px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    border: 10px solid rgb(137, 132, 132);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.watch__pointer {
+    width: 15px;
+    height: 15px;
+    background-color: grey;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+
+.watch__second {
+    width: 6px;
+    height: 150px;
+    background-color: red;
+    position: absolute;
+    bottom: 50%;
+    left: 50%-3px;
+    transform-origin: bottom;
+    animation: seconds 6s linear infinite;
+}
+
+.watch__minute {
+    width: 8px;
+    height: 200px;
+    background-color: grey;
+    position: absolute;
+    bottom: 50%;
+    left: 50%-4px;
+    transform-origin: bottom;
+    animation: minutes 360s steps(60,end) infinite;
+}
+
+@keyframes seconds {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes minutes {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
