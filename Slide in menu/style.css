@@ -48,8 +48,7 @@ p {
 }
 
 .menu {
-    display: none;
-    width: 15%;
+    width: 30%;
     height: 100%;
     color: rgb(175, 166, 166);
     background-color: #222222;
@@ -57,10 +56,13 @@ p {
     position: absolute;
     top: 0;
     left: 0;
+    transform: translateX(-100%);
+    transition: transform 1s;
 }
 
 .menu.open {
-    display: block; /*När man trycker på knappen får menu klassen open. Då ändras också display från none till block*/
+    transform: translateX(0);
+    transition: transform 1s;
 }
 
 .menu__list {
@@ -68,17 +70,50 @@ p {
     flex-direction: column;
     gap: 1.5rem;
     list-style-type: none;
-    padding: 0;
 }
 
-.menu__list span {
-    margin-right: 2rem;
-    font-size: 1rem;
+.menu__list li::marker {
+    content:attr(custom-attr); /*marker motsvarar punkten i listan denna ersätter 
+    vi med innehållet på vårt nya attribut som vi skapade i html.*/ 
+    font-weight: 600;
 }
 
-.menu__list p {
-    margin-left: 3rem;
+.menu__list li {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
 }
+
+nav li:nth-child(1) {
+    transform: translateX(-100%);
+    transition: transform 1.4s;
+}
+nav.open ul li:nth-child(1) {
+    transform: translateX(0);
+}  
+
+nav ul li:nth-child(2) {
+    transform: translateX(-100%);
+    transition: transform 1.6s;
+}
+nav.open ul li:nth-child(2) {
+    transform: translateX(0);
+}  
+
+nav ul li:nth-child(3) {
+    transform: translateX(-100%);
+    transition: transform 1.8s;
+}
+nav.open ul li:nth-child(3) {
+    transform: translateX(0);
+}  
+
+nav ul li:nth-child(4) {
+    transform: translateX(-100%);
+    transition: transform 2s;
+}
+nav.open ul li:nth-child(4) {
+    transform: translateX(0);
+}  
 
 .text {
     text-align: center;
