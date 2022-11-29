@@ -7,38 +7,41 @@
     <link rel="stylesheet" href="style.css" />
     <title>Slide in menu</title>
   </head>
+
   <body>
-    <section class="text">
-      <h1>Hello there</h1>
-      <p>Toggle the red button in the upper left corner</p>
-    </section>
-    <nav class="open"></nav>
-    <article class="menu">
-      <div class="menu__toggle"></div>
-      <ul class="menu__list">
-        <li>
-          <h3><span>01</span>Home</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </li>
-        <li>
-          <h3><span>02</span>What we do</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </li>
-        <li>
-          <h3><span>03</span>Who we are</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </li>
-        <li>
-          <h3><span>04</span>Contact</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </li>
-      </ol>
-    </article>
+    <main class="wrapper">
+      <button class="toggle"></button>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li>
+            <h3><span>01</span>Home</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </li>
+          <li>
+            <h3><span>02</span>What we do</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </li>
+          <li>
+            <h3><span>03</span>Who we are</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </li>
+          <li>
+            <h3><span>04</span>Contact</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="text">
+        <h1>Hello there</h1>
+        <p>Toggle the red button in the upper left corner</p>
+      </section>
+    </main>
+
     <script>
-        document.querySelector('.toggle')
-            .addEventListener('click', (e) => {
-                    document.querySelector('nav').classList.toggle('open')
-            })
-        </script>
+      document.querySelector(".toggle").addEventListener("click", (e) => {
+        document.querySelector("nav").classList.toggle("open");
+      });
+    </script>
   </body>
 </html>
