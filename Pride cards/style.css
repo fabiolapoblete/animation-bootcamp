@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.cards {
+    min-height: 100%;
+    background-color: #e2e2e2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    transition: transform 1.5s linear;
+}
+
+.card-1 {
+    background-color: #F3B3D2;
+    z-index: 9;
+}
+.cards:hover .card-1 {
+    transform: rotate(-45deg) translate(-100px, 8px);
+
+}
+
+.card-2 {
+    background-color: #C777F4;
+    z-index: 8;
+    
+}
+.cards:hover .card-2 {
+    transform: rotate(-35deg) translate(-80px, 6px);
+}
+
+.card-3 {
+    background-color: #6A74FC;
+    z-index: 7;
+}
+.cards:hover .card-3 {
+    transform: rotate(-25deg) translate(-60px, 4px);
+}
+
+.card-4 {
+    background-color: #5DEBFD;
+    z-index: 6;
+}
+.cards:hover .card-4 {
+    transform: rotate(-15deg) translate(-40px, 2px);
+}
+
+.card-5 {
+    background-color: #36CE87;
+    z-index: 5;
+}
+.cards:hover .card-5 {
+    transform: rotate(-5deg) translate(0, 0);
+}
+
+.card-6 {
+    background-color: #55FF40;
+    z-index: 4;
+}
+.cards:hover .card-6 {
+    transform: rotate(0) translate(40px, 2px);
+}
+
+.card-7 {
+    background-color: #F9F930;
+    z-index: 3;
+}
+.cards:hover .card-7 {
+    transform: rotate(5deg) translate(60px, 4px);
+}
+
+.card-8 {
+    background-color: #FE9319;
+    z-index: 2;
+}
+.cards:hover .card-8 {
+    transform: rotate(15deg) translate(80px, 6px);
+}
+
+.card-9 {
+    background-color: #FF0708;
+    z-index: 1;
+}
+.cards:hover .card-9 {
+    transform: rotate(25deg) translate(100px, 8px);
+}
+
+
