@@ -58,7 +58,7 @@ body {
     animation:  lift-card 2s ease-in-out forwards, 
                 flip-card 2s 2s ease-in-out forwards, 
                 card-color 2s 2s step-end forwards,
-                lift-card 2s 8s ease-in-out reverse,
+                lift-card 2s 8s ease-in-out reverse forwards,
                 flip-card 2s 6s ease-in-out reverse,
                 card-color 2s 6s step-end reverse forwards;
 }
@@ -78,16 +78,16 @@ body {
         transform: translateY(0) translateZ(0) rotateX(60deg);
     }
     to {
-        transform: translateY(-200px) translateZ(100px) rotateX(0);
+        transform: translateY(-100px) translateZ(100px) rotateX(0);
     }
 }
 
 @keyframes flip-card {
     from {
-        transform: translateY(-200px) translateZ(100px) rotateY(0);
+        transform: translateY(-100px) translateZ(100px) rotateY(0);
     }
     to {
-        transform: translateY(-200px) translateZ(100px) rotateY(-180deg);
+        transform: translateY(-100px) translateZ(100px) rotateY(-180deg);
     }
 }
 
