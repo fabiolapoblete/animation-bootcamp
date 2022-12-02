@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Roboto';
+    background-color: #e2e2e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 750px;
+    perspective-origin: 50%;
+}
+
+.wrapper {
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    background-color: #4285F4;
+    border-radius: 10px;
+    transform: rotateX(60deg);
+    box-shadow: 1px 1px 22px rgb(150, 146, 146);
+}
+
+.card::before {
+    content: "front";
+    position: absolute;
+    top: 50%;
+    left: 28%;
+    color: rgb(40, 40, 40);
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase; 
+}
+
+.card::after {
+    content: "back";
+    position: absolute;
+    top: 50%;
+    left: 28%;
+    color: rgb(40, 40, 40);
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: rotateY(180deg);
+}
+
+.wrapper:hover .card {
+    animation:  lift-card 2s ease-in-out forwards, 
+                flip-card 2s 2s ease-in-out forwards, 
+                card-color 2s 2s step-end forwards,
+                lift-card 2s 8s ease-in-out reverse,
+                flip-card 2s 6s ease-in-out reverse,
+                card-color 2s 6s step-end reverse forwards;
+}
+
+.wrapper:hover .card::before {
+    animation:  hide 2s 1s step-end forwards,
+                show 2s 5s step-end forwards;
+}
+.wrapper:hover .card::after {
+    animation:  show 2s 1s step-end forwards,
+                hide 2s 5s step-end forwards;
+}
+
+
+@keyframes lift-card {
+    from {
+        transform: translateY(0) translateZ(0) rotateX(60deg);
+    }
+    to {
+        transform: translateY(-200px) translateZ(100px) rotateX(0);
+    }
+}
+
+@keyframes flip-card {
+    from {
+        transform: translateY(-200px) translateZ(100px) rotateY(0);
+    }
+    to {
+        transform: translateY(-200px) translateZ(100px) rotateY(-180deg);
+    }
+}
+
+@keyframes card-color {
+    0% {
+        background-color: #4285F4;
+    }
+    49% {
+        background-color: #4285F4;
+    }
+    50% {
+        background-color: #F4B400;
+    }
+    100% {
+        background-color: #F4B400;
+    }
+}
+
+@keyframes hide {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
